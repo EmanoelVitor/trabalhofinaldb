@@ -5,9 +5,11 @@
     <head>
       <meta charset="utf-8">
         <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-    <table>
+    <div class="table-responsive-sm">
+    <table class="table">
     <thead>
       <tr>
         <th>Id</th>
@@ -31,11 +33,11 @@
           <td>".$row['email']."</td>
           <td>".$row['endereco']."</td>
           <td>
-          <a href='edit.php?id_cliente=".$row['id_cliente']."'>
-          <button type='button'>Editar<button></a>
+          <a href='edit.php?id_cliente=".$row['id_cliente']."'><button type='button' class='btn btn-success'>Editar</button></a>
+          
           </td>
           <td>
-          <a href='php_action/remove.php?id_cliente= ".$row['id_cliente']."'> <button type='button'>Excluir</button></a>
+          <a href='php_action/remove.php?id_cliente= ".$row['id_cliente']."'> <button type='button' class='btn btn-danger'>Excluir</button></a>
           </td>
           </tr>";
         }
@@ -45,6 +47,6 @@
       ?>
     </tbody>
   </table>
-        
+    </div>  
     <body>
 </html>
